@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "checkpoint": "git checkout check_point && git merge --no-ff gh-pages && git push && git checkout gh-pages"
   },
   "eslintConfig": {
     "extends": [
