@@ -3,17 +3,17 @@
   "name": "Just Pay",
   "icons": [
     {
-      "src": "JP_logo_dalle.jpg",
+      "src": "jp_logo2.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
-      "src": "JP_logo_dalle.jpg",
-      "type": "image/jpg",
+      "src": "jp_logo2.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "JP_logo_dalle.jpg",
+      "src": "jp_logo2.png",
       "type": "image/png",
       "sizes": "512x512"
     }
