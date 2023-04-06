@@ -58,7 +58,7 @@ export default function Home() {
             navigate(`/dis/${checked.join()}`);
           }
         }}> 
-          Buscar
+          Buscar descuentos
         </button>
       </div>
     </div>
