@@ -1,7 +1,11 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './routes/home';
 import Dsc from './routes/discounts';
+import Admin from './routes/admin';
+
+
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/dis/:selected" element={<Dsc/>} />
+        <Route path="/admin/sshlpe" element={<Admin/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

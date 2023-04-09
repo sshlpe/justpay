@@ -21,13 +21,11 @@ export default function DscPage() {
       setData(jsonData);
       setcData(jsonData);
     };
-
     fetchData();
   }, []);
 
   const handleInputChange = (event) => {
     filtrar(event.target.value);
-
   };
 
   const filtrar = (word) => {
