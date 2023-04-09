@@ -1,0 +1,43 @@
+
+.container {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	align-content: center;
+}
+
+.mid-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 1rem 0; /* ajusta el valor de margin vertical y horizontal según sea necesario */
+  	padding: 0 1rem;
+  	border: 1px solid rgba(0, 0, 0, 0.3);
+  	padding: 1rem;
+  	border-radius: 0.3rem;
+  	overflow: auto;
+  	height: 10rem;
+}
+
+.small-container {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.mid-button {
+	height: 30%;
+}
+
+.list {
+	list-style: none;
+}
+
+.small-box {
+	margin: 1rem;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+	border: 1px solid rgba(0, 100, 20, 0.3);
+	min-width: 10rem;
+}

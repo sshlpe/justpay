@@ -8,6 +8,7 @@ export default function Home() {
   const navigate = useNavigate();
   const [entities, setEntities] = useState([]);
   const [checked, setChecked] = useState([]);
+  const [send, setSend] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +37,40 @@ export default function Home() {
     }
   };
 
+  const sendSubmit = async () => {
+    let text = document.getElementById('submit-input').value;
+    if (text) {
+      const data = {'submit': text};
+      const url = process.env.REACT_APP_API_URL + 'submits';
+      await fetch(url, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      setSend('Se envio tu Solicitud');
+      document.getElementById('submit-input').value = '';
+    }
+  };
+
+  const sendComment = async () => {
+    let text = document.getElementById('comment-input').value;
+    if (text) {
+      const data = {'comment': text};
+      const url = process.env.REACT_APP_API_URL + 'comments';
+      await fetch(url, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      setSend('Se envio tu Comentario');
+      document.getElementById('comment-input').value = '';
+    }
+  }
+
   return (
     <div className="Home">
       <div className="container">
@@ -60,6 +95,19 @@ export default function Home() {
         }}> 
           Buscar descuentos
         </button>
+      </div>
+      <p className="space"> {send} </p>
+      <div className="h-container">
+        <div className="form-container">
+          <h4> Falta alguna empresa? Solicita algunas </h4>
+          <textarea placeholder="Write something.." id="submit-input"></textarea>
+          <button onClick={() => {sendSubmit()}}> enviar </button>
+        </div>
+         <div className="form-container">
+          <h4> Deja un Comentario </h4>
+          <textarea placeholder="Write something.." id="comment-input" ></textarea>
+          <button onClick={() => {sendComment()}}> enviar </button>
+        </div>
       </div>
     </div>
   );
