@@ -49,7 +49,7 @@ export default function Home() {
         },
         body: JSON.stringify(data)
       });
-      setSend('Se envio tu Solicitud');
+      setSend('Se envio tu solicitud');
       document.getElementById('submit-input').value = '';
     }
   };
@@ -66,7 +66,7 @@ export default function Home() {
         },
         body: JSON.stringify(data)
       });
-      setSend('Se envio tu Comentario');
+      setSend('Se envio tu comentario');
       document.getElementById('comment-input').value = '';
     }
   }

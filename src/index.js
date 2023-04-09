@@ -1,13 +1,10 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './routes/home';
 import Dsc from './routes/discounts';
 import Admin from './routes/admin';
 
-
 import reportWebVitals from './reportWebVitals';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
