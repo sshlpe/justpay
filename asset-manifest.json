@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/justpay/static/css/main.bf919e80.css",
-    "main.js": "/justpay/static/js/main.cec13400.js",
+    "main.js": "/justpay/static/js/main.9ee33248.js",
     "static/js/787.0caa7bfa.chunk.js": "/justpay/static/js/787.0caa7bfa.chunk.js",
     "static/media/slick.svg": "/justpay/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/justpay/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/justpay/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/justpay/index.html",
     "main.bf919e80.css.map": "/justpay/static/css/main.bf919e80.css.map",
-    "main.cec13400.js.map": "/justpay/static/js/main.cec13400.js.map",
+    "main.9ee33248.js.map": "/justpay/static/js/main.9ee33248.js.map",
     "787.0caa7bfa.chunk.js.map": "/justpay/static/js/787.0caa7bfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf919e80.css",
-    "static/js/main.cec13400.js"
+    "static/js/main.9ee33248.js"
   ]
 }
