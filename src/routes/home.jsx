@@ -76,7 +76,6 @@ export default function Home() {
     <div className="Home page-container">
       <div className="container">
         <h1> Elige tus Empresas: </h1>
-
         <div className="button-container">
           {entities.map(([name, url]) => {
             return (
@@ -88,7 +87,6 @@ export default function Home() {
               )
           })}
         </div>
-
         <button onClick={() => {
           if (checked.length !== 0){
             navigate(`/dis/${checked.join()}`);
@@ -110,7 +108,6 @@ export default function Home() {
           <button onClick={() => {sendComment()}}> enviar </button>
         </div>
       </div>
-      <p className="space"> </p>
       <Footer />
     </div>
   );

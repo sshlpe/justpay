@@ -9,7 +9,7 @@ export default function Footer() {
 		<footer className="f-container">
 			<p> JustPay &copy; 2023 - Todos los derechos reservados
 			  <a className="h" href=''  onClick={() => {
-			  navigate('/admin/sshlpe')}}>. </a>
+			  navigate('/admin')}}>. </a>
 			</p>
 	    </footer>
 	)

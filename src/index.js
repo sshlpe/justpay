@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/dis/:selected" element={<Dsc/>} />
-        <Route path="/admin/sshlpe" element={<Admin/>} />
+        <Route path="/admin" element={<Admin/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
