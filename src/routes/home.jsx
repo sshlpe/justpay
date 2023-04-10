@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect} from "react";
 import { useNavigate} from "react-router-dom";
+import Footer from './footer';
 
 import '../styles/home.css';
 
@@ -72,7 +73,7 @@ export default function Home() {
   }
 
   return (
-    <div className="Home">
+    <div className="Home page-container">
       <div className="container">
         <h1> Elige tus Empresas: </h1>
 
@@ -109,6 +110,8 @@ export default function Home() {
           <button onClick={() => {sendComment()}}> enviar </button>
         </div>
       </div>
+      <p className="space"> </p>
+      <Footer />
     </div>
   );
 }
