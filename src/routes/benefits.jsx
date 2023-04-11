@@ -10,7 +10,6 @@ export default function DscPage() {
   const {selected} = useParams();
   const [data, setData] = useState([]);
   const [cdata, setcData] = useState([]);
-
   const navigate = useNavigate();
 
   useEffect(() => {
