@@ -1,3 +1,5 @@
+/*
+
 import React from "react";
 import Slider from "react-slick";
 
@@ -63,3 +65,5 @@ const MySlider = ({name, value}) => {
 };
 
 export default MySlider;
+
+*/

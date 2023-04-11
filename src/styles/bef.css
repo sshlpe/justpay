@@ -1,13 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
-body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
 
 a:link, a:visited, a:active {
     text-decoration:none;
@@ -21,6 +11,7 @@ a:link, a:visited, a:active {
 }
 
 
+/*
 .slide {
   text-align: center;
   background-color: rgba(0, 255, 0, 0.1);
@@ -31,6 +22,7 @@ a:link, a:visited, a:active {
 
 /* ----------------- https://codepen.io/mahmudulhrabby/pen/GGqdvr --------------- */
 
+/*
 .c-item {
   align-self: center;
   margin: 0.5rem;
@@ -78,6 +70,7 @@ a:link, a:visited, a:active {
 /* ///////////////////////////////////////////////////////////////////////////////// */
 /* ----------------------- https://copy-paste-css.com/form-input-text ------------- */
 
+
 .input-txt{
   box-shadow: inset #abacaf 0 0 0 2px;
   border: 0;
@@ -107,6 +100,7 @@ a:link, a:visited, a:active {
 }                             
 
 /* --------------------------------------------------------------------------------- */
+
 
 .button-13 {
   background-color: #fff;
@@ -140,3 +134,5 @@ a:link, a:visited, a:active {
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
+
+
