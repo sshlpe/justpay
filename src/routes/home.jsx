@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <button onClick={() => {
           if (checked.length !== 0){
-            navigate(`/dis/${checked.join()}`);
+            navigate(`/benefits/${checked.join()}`);
           }
         }}> 
           Buscar descuentos
@@ -108,6 +108,7 @@ export default function Home() {
           <button onClick={() => {sendComment()}}> enviar </button>
         </div>
       </div>
+
       <Footer />
     </div>
   );
