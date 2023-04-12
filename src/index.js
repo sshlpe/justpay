@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './routes/home';
-import Dsc from './routes/discounts';
 import Admin from './routes/admin';
 import Bef from './routes/benefits';
 

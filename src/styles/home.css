@@ -17,41 +17,26 @@ a:link, a:visited, a:active {
 
 .container {
 	display: flex;
+  flex-flow: column;
+  gap: 20px;
 	text-align: center;
 	align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-
-  .button-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 0.35fr));
-    justify-content: center;
-    gap: 10px;
-    margin: 5%;
-    text-align: center; /* Centrar imágenes */
-  }
-
-}
-
-@media only screen and (max-width: 767px) {
-
-  .button-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
-    justify-content: center;
-    gap: 10px;
-    margin: 5%;
-    text-align: center; /* Centrar imágenes */
-  }
-
+.button-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px;
+  align-items: center;
+  overflow-x: auto;
 }
 
 .button-container button {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   background-color: rgba(255, 255, 255, 1);
+  padding: 0px;
 }
 
 .button-container button:hover {
@@ -66,7 +51,7 @@ a:link, a:visited, a:active {
   display: block;
   max-width: 100%;
   object-fit: cover;
-  padding: 0.3rem;
+  padding: 0px;
 }
 
 img:hover {
@@ -89,9 +74,12 @@ textarea {
   margin: 0.5rem;
 }
 
-
 /* pantallas mayoes a */
 @media only screen and (min-width: 768px) {
+
+  .button-container {
+    width: 20%;
+  }
 
   .h-container {
     display: flex;
@@ -104,6 +92,10 @@ textarea {
 
 /* pantallas menores a */
 @media only screen and (max-width: 767px) {
+
+  .button-container {
+    width: 60%;
+  }
 
   .h-container {
     display: flex;

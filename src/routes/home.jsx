@@ -18,7 +18,6 @@ export default function Home() {
       const jsonData = await response.json();
       setEntities(Object.entries(jsonData));
     };
-
     fetchData();
   }, []);
 
