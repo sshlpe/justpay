@@ -4,6 +4,8 @@ import { useNavigate} from "react-router-dom";
 import Footer from './footer';
 
 import '../styles/home.css';
+const logo = 'jp_logo.png';
+const box = 'box.png';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -73,28 +75,42 @@ export default function Home() {
 
   return (
     <div className="Home page-container">
-      <div className="container">
-        <h1> Elige tus Empresas: </h1>
-        <div className="button-container">
-          {entities.map(([name, url]) => {
-            return (
-              <div>
-                <button key={name} id={name} onClick={() => {clicked(name)}} className="">
-                  <img src={url} alt={name} />
-                </button>
-              </div>
-              )
-          })}
-        </div>
-        <button onClick={() => {
-          if (checked.length !== 0){
-            navigate(`/benefits/${checked.join()}`);
-          }
-        }}> 
-          Buscar descuentos
-        </button>
+      <div className="img-container">
+        <img src={logo} alt="logo" className="logo-img" />
+        <p className="logo-text"> Just Pay </p>
       </div>
-      <p className="space"> {send} </p>
+       <p className="big-space"> </p>
+      <div className="main-container">
+        <div className="container">
+          <div>
+            <h1 className="main-title"> Todos tus beneficios </h1>
+            <h1 className="main-title purple-text"> en un solo lugar </h1>
+          </div>
+          <p className="sub-title">
+          Descubre los descuentos exclusivos que tus empresas tienen para ofrecerte
+          </p>
+          <div className="button-container">
+            {entities.map(([name, url]) => {
+              return (
+                <div>
+                  <button key={name} id={name} onClick={() => {clicked(name)}} className="">
+                    <img src={url} alt={name} />
+                  </button>
+                </div>
+                )
+            })}
+          </div>
+          <button onClick={() => {
+            if (checked.length !== 0){
+              navigate(`/benefits/${checked.join()}`);
+            }
+          }}> 
+            Buscar descuentos
+          </button>
+        </div>
+        <img src={box} alt="box" className="back-img" />
+      </div>
+      <p className="space normal-text"> {send} </p>
       <div className="h-container">
         <div className="form-container">
           <h4> Falta alguna empresa? Solicita algunas </h4>
@@ -107,7 +123,6 @@ export default function Home() {
           <button onClick={() => {sendComment()}}> enviar </button>
         </div>
       </div>
-
       <Footer />
     </div>
   );

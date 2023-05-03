@@ -40,7 +40,7 @@ export default function Admin() {
 	}
 
 	return (
-		<div className="Admin">
+		<div className="Admin t-qsand">
 			<div className='container'>
 				<h1> Centro de Control </h1>
 				<div className='mid-container'>

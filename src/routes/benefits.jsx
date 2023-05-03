@@ -54,7 +54,7 @@ export default function DscPage() {
   return (
     <div className="DscPage">
       <div className="container">
-        <h1> Tienes los Siguentes Descuentos </h1>
+        <h1 className="t-qsand"> Tienes los Siguentes Descuentos </h1>
         <input type="text" placeholder="Filtrar descuentos" onChange={handleInputChange} className="input-txt"/>
       </div>
       <div>

@@ -46,7 +46,7 @@ export default function Cards(section) {
 
 	return (
 		<div>
-			<p className="sup-title"> {section.title} </p>
+			<p className="sup-title t-qsand"> {section.title} </p>
 			<div className="large-container"> 
 				<div id={section.title+"-arrowleft"} hidden={true} className="arr-block-left">
 					<FaAngleLeft className="arrow left"/>
@@ -57,7 +57,7 @@ export default function Cards(section) {
 							<div className="card-container">
 								{row.map((elm) => {
 					              return (
-					                <div className="card-item">
+					                <div className="card-item t-qsand">
 										<p className="title"> {elm.title} </p>
 										<p className="text"> {elm.text} </p>
 										<a href={elm.url} target="_blank" className="link button-13 c-item" 
