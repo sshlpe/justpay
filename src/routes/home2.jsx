@@ -112,7 +112,7 @@ export default function Home() {
 					<div className="container-h-5">
 						<picture>
 						  <source media="(max-width: 768px)" srcset={small_box} />
-						  <img src={box} alt="box" className="h-main-imge" />
+						  <img src={box} alt="box" className="h-main-image" />
 						</picture>
 					</div>
 				</div>
