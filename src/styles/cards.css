@@ -94,13 +94,13 @@
 
 .arr-block-left {
 	position: absolute;
-	left: -15px;
+	left: -5px;
 }
 
 .arr-block-right {
 	/*background-color: rgba(0, 0, 0, 0.05);*/
 	position: absolute;
-	right: -15px;
+	right: -5px;
 }
 
 
