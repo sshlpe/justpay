@@ -106,6 +106,7 @@ body {
 .h-main-imge {
 	width: auto;
 	height: 20vw;
+	min-height: 7rem;
 }
 
 /* ------------ Entities Buttons ------------ */
@@ -172,7 +173,7 @@ body {
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
-		justify-content: space-around;
+		/*justify-content: end;*/
 	}
 
   .h-main-title-1,
