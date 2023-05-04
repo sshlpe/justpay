@@ -7,6 +7,7 @@ import Footer from './footer';
 import '../styles/home2.css';
 const logo = 'jp_logo.png';
 const box = 'box.png';
+const small_box = 'small-box.png'
 
 export default function Home() {
 	const navigate = useNavigate();
@@ -109,7 +110,10 @@ export default function Home() {
 				        </button>
 					</div>
 					<div className="container-h-5">
-						<img src={box} alt="box" className="h-main-imge" />
+						<picture>
+						  <source media="(max-width: 768px)" srcset={small_box} />
+						  <img src={box} alt="box" className="h-main-imge" />
+						</picture>
 					</div>
 				</div>
 				<Footer />
