@@ -112,7 +112,6 @@ export default function Home() {
 						<img src={box} alt="box" className="h-main-imge" />
 					</div>
 				</div>
-				<p className="space"> </p>
 				<Footer />
 			</div>
 		</div>
