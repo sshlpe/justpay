@@ -26,7 +26,7 @@ export default function Cards(section) {
 		const id_left = section.title+"-arrowleft";
 		const id_right = section.title+"-arrowright";
 
-		if (scroller.scrollLeft === 0) {
+		if (scroller.scrollLeft <= 0) {
 			const arrow_left = document.getElementById(id_left);
 			arrow_left.hidden = true;
 			return
