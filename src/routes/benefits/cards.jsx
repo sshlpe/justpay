@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRef} from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import '../styles/cards.css';
+import '../../styles/benefits/cards.css';
 
 export default function Cards(section) {
 

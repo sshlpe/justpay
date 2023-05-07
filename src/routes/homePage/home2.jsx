@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState, useEffect} from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 // ----- components ------
-import Footer from './footer';
+import Footer from '../hd-ft/footer';
+import Header from '../hd-ft/header';
 // ----- files -------
-import '../styles/home2.css';
+import '../../styles/homepage/home2.css';
 const logo = 'jp_logo.png';
 const box = 'box.png';
 const small_box = 'small-box.png'
@@ -76,58 +77,41 @@ export default function Home() {
 	  }
 
 	return (
-		<div className="container-h-0" >
-			<div className="Home container-h-1">
-				<div className="container-h-2">
-					<img src={logo} alt="logo" className="h-logo-img" />
-	        		<p className="h-logo-text"> Just Pay </p>
+		<div className="Home container-h-1">
+			<p className="space"> </p>
+			<div className="container-h-3">
+				<div className="container-h-4">
+					<h1 className="h-main-title-1"> Todos tus beneficios </h1>
+					<h1 className="h-main-title-2"> en un solo lugar </h1>
+           			<p className="h-sub-title">
+          				Descubre los descuentos exclusivos que tus empresas tienen para ofrecerte
+          			</p>
+          			<div className="container-h-b-1">
+			            {entities.map(([name, url]) => {
+			              return (
+			                <div>
+			                  <button key={name} id={name} onClick={() => {clicked(name)}} className="">
+			                    <img src={url} alt={name} />
+			                  </button>
+			                </div>
+			                )
+			            })}
+			         </div>
+			         <button onClick={() => {
+			            if (checked.length !== 0){
+			            	navigate(`/benefits/${checked.join()}`);
+			            }
+			          }} className="h-button-1"> 
+			            Encuéntralos aquí
+			        </button>
 				</div>
-				<p className="space"> </p>
-				<div className="container-h-3">
-					<div className="container-h-4">
-						<h1 className="h-main-title-1"> Todos tus beneficios </h1>
-	           			<h1 className="h-main-title-2"> en un solo lugar </h1>
-	           			<p className="h-sub-title">
-	          				Descubre los descuentos exclusivos que tus empresas tienen para ofrecerte
-	          			</p>
-	          			<div className="container-h-b-1">
-				            {entities.map(([name, url]) => {
-				              return (
-				                <div>
-				                  <button key={name} id={name} onClick={() => {clicked(name)}} className="">
-				                    <img src={url} alt={name} />
-				                  </button>
-				                </div>
-				                )
-				            })}
-				         </div>
-				         <button onClick={() => {
-				            if (checked.length !== 0){
-				            	navigate(`/benefits/${checked.join()}`);
-				            }
-				          }} className="h-button-1"> 
-				            Encuéntralos aquí
-				        </button>
-					</div>
-					<div className="container-h-5">
-						<picture>
-						  <source media="(max-width: 700px)" srcset={small_box} />
-						  <img src={box} alt="box" className="h-main-image" />
-						</picture>
-					</div>
+				<div className="container-h-5">
+					<picture>
+					  <source media="(max-width: 700px)" srcset={small_box} />
+					  <img src={box} alt="box" className="h-main-image" />
+					</picture>
 				</div>
-				<Footer />
 			</div>
 		</div>
 	);
 }
-
-
-
-
-
-
-
-
-
-

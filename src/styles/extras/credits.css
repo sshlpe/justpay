@@ -1,0 +1,44 @@
+
+.Credits {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 0.3rem;
+	background-color: rgba(250, 250, 250, 0.6);
+	font-family: 'Quicksand', serif;
+	flex-grow: 1;
+}
+
+.c-title-1{
+	font-size: 2rem;
+}
+
+.c-container-1 {
+	align-self: start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.c-container-1 > a {
+	margin: 1rem;
+	padding: 0.5rem;
+	height: 2rem;
+	text-decoration: none;
+	color: black;
+	border: 1px solid green;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.c-container-1 > a > img {
+	height: 2rem;
+	width: auto;
+}
+
+.c-container-1 > a:hover {
+	background-color: rgba(129, 230, 152, 0.5);
+}

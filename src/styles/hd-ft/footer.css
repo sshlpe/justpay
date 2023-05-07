@@ -1,0 +1,32 @@
+
+footer {
+  position: relative;
+  font-family: 'Quicksand', serif;
+  font-size: 1.7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: auto;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.h {
+  text-decoration: none !important;
+  cursor: text;
+}
+
+.f-icon-1 {
+  color: rgba(41, 201, 207, 0.6);
+}
+
+.f-credits {
+  text-decoration: none;
+  color: black;
+}
+
+.f-credits:hover {
+  color: rgb(4, 116, 120);;
+}

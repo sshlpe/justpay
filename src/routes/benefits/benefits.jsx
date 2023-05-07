@@ -3,7 +3,7 @@ import { useState, useEffect} from "react";
 import { useParams, useNavigate} from "react-router-dom";
 import Cards from './cards';
 
-import '../styles/bef.css';
+import '../../styles/benefits/bef.css';
 
 export default function DscPage() {
 

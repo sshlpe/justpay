@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 
-import '../styles/admin.css';
+import '../../styles/extras/admin.css';
 
 export default function Admin() {
 	const [admin_info, setAdmin] = useState({});
