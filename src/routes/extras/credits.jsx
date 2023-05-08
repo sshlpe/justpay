@@ -6,7 +6,8 @@ import Header from '../hd-ft/header';
 
 import '../../styles/extras/credits.css';
 const box = 'box.png';
-const img1 = 'images/image1.PNG';
+const img1 = 'images/image1-small.png';
+const img2 = 'images/image2-small.png';
 
 export default function Admin() {
 	
@@ -23,7 +24,7 @@ export default function Admin() {
 				 	Imagen de xvector en Freepik 
 				 </a>
 				 <a href="https://www.freepik.es/psd-gratis/venta-descuento-cupon-etiqueta-icono-aislado-3d-render-ilustracion_32464022.htm#query=icono%203d%20de%20descuento%20de%20caja&position=25&from_view=search&track=ais">
-				 	<img src={box} alt="box" />
+				 	<img src={img2} alt="box" />
 				 	Imagen de xvector en Freepik 
 				 </a> 
 			</div>

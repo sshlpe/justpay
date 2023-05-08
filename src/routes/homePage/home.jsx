@@ -52,7 +52,7 @@ export default function Home() {
 			            //}
 			            handleOpenContact();
 			          }} className="h-button-1"> 
-			            Encuéntralos aquí
+			            Busca tus empresas
 			        </button>
 			        {showEnts && (
 		    			<EntList entities={entities} onClose={handleCloseContact} />

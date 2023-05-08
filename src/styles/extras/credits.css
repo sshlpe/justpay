@@ -1,5 +1,6 @@
 
 .Credits {
+	padding: 1rem;
 	margin: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -12,7 +13,7 @@
 }
 
 .c-title-1{
-	font-size: 2rem;
+	font-size: 2vw;
 }
 
 .c-container-1 {
@@ -25,20 +26,28 @@
 .c-container-1 > a {
 	margin: 1rem;
 	padding: 0.5rem;
-	height: 2rem;
+	height: 4rem;
 	text-decoration: none;
 	color: black;
 	border: 1px solid green;
 	border-radius: 0.5rem;
 	display: flex;
 	align-items: center;
+	gap: 1rem;
 }
 
 .c-container-1 > a > img {
-	height: 2rem;
+	height: 4rem;
 	width: auto;
 }
 
 .c-container-1 > a:hover {
 	background-color: rgba(129, 230, 152, 0.5);
 }
+
+@media only screen and (max-width: 770px) {
+	.c-title-1{
+		font-size: 4vw;
+	}
+}
+

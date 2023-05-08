@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import { IoClose } from "react-icons/io5";
 import { BsCircle, BsCheckCircle } from "react-icons/bs";
 import { useNavigate, Link} from "react-router-dom";
@@ -6,6 +6,7 @@ import { useNavigate, Link} from "react-router-dom";
 // -------------- files -------------
 import "../../styles/homepage/ent-list.css";
 const display_image = 'images/image2.PNG';
+const display_image_small = 'images/image2-small.png';
 
 export default function EntList ({entities, onClose, children}) { // pop list of entities
 	const [visible, setVisible] = useState(true);
@@ -61,7 +62,10 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 	        			})}
 	        		</div>
 	        		<div className="ent-container-5">
-	        			<img src={display_image} className="ent-img-3" />
+	        			<picture>
+	        				<source media="(max-width: 700px)" srcset={display_image_small} />
+	        				<img src={display_image} className="ent-img-3" />
+						</picture>
 	        			<h3> Elige tus empresas </h3>
 	        		</div>
 	        		<div className="ent-container-3">
@@ -73,22 +77,16 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 											<img src={url} alt={name} className="ent-img-1" />
 											<p className="test"> {name} </p>
 										</div>
-										{icons[name] === 'checkCircle' ? (
-						                    <BsCheckCircle className="ent-check-icon" />
-						                ) : (
-						                    <BsCircle className="" />
-						                )}
+										{icons[name] === 'checkCircle' ? ( <BsCheckCircle className="ent-check-icon" /> ) 
+										: (<BsCircle className="" /> )}
 									</button>
 								</div>
 							);
 						})}
 	        		</div>
-	        		<button onClick={() => {
-			            if (checked.length !== 0){
-							navigate(`/benefits/${checked.join()}`);
-			            }
-			          }} className=""> 
-			            Encuéntralos aquí
+	        		<button onClick={() => { navigate(`/benefits/${checked.join()}`);}} 
+	        		className="ent-button-1" id="ent-b-1" disabled={checked.length === 0} > 
+			            Ver promociones
 			        </button>
 	        	</div>
 	        </div>

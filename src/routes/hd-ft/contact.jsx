@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 // -------------- files -------------
 import "../../styles/hd-ft/contact.css";
 const display_image = 'images/image1.PNG';
+const display_image_small = 'images/image1-small.png';
 
 export default function Contact ({onClose, children}) {
 	const [visible, setVisible] = useState(true);
@@ -61,7 +62,10 @@ export default function Contact ({onClose, children}) {
 	        <div className="ct-content">
 	        	<p className=""> {send} </p>
 	      		<div className="ct-container-1">
-	      			<img src={display_image} className="ct-image-1" />
+	      			<picture>
+	        			<source media="(max-width: 700px)" srcset={display_image_small} />
+	        			<img src={display_image} className="ct-image-1" />
+					</picture>
 	      			<div className="ct-container-2">
 						<div className="ct-container-3">
 							<div className="ct-container-4">
