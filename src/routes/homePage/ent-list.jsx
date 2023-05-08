@@ -5,6 +5,7 @@ import { useNavigate, Link} from "react-router-dom";
 
 // -------------- files -------------
 import "../../styles/homepage/ent-list.css";
+const display_image = 'images/image2.PNG';
 
 export default function EntList ({entities, onClose, children}) { // pop list of entities
 	const [visible, setVisible] = useState(true);
@@ -59,7 +60,10 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 	        				);
 	        			})}
 	        		</div>
-	        		<h3> Elige tus empresas </h3>
+	        		<div className="ent-container-5">
+	        			<img src={display_image} className="ent-img-3" />
+	        			<h3> Elige tus empresas </h3>
+	        		</div>
 	        		<div className="ent-container-3">
 	        			{entities.map(([name, url]) => {
 							return (
