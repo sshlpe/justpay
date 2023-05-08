@@ -1,19 +1,20 @@
 import React from 'react';
 import { useState, useEffect} from "react";
-import { useNavigate, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 // ----- components ------
 import Footer from '../hd-ft/footer';
 import Header from '../hd-ft/header';
+import EntList from './ent-list';
 // ----- files -------
-import '../../styles/homepage/home2.css';
+import '../../styles/homepage/home.css';
 const logo = 'jp_logo.png';
 const box = 'box.png';
 const small_box = 'small-box.png'
 
 export default function Home() {
-	const navigate = useNavigate();
 	const [entities, setEntities] = useState([]);
-	const [checked, setChecked] = useState([]); // clicked buttonss
+	const [checked, setChecked] = useState([]); // clicked buttons
+	const [showEnts, setShowEnts] = useState(false); // entities popup
 
 	useEffect(() => { //get the current entities and thier logos
 	    const fetchData = async () => {
@@ -25,21 +26,15 @@ export default function Home() {
 	    fetchData();
 	  }, []);
 
-	const clicked = (id) => { // check or uncheck buttons
-	    let button = document.getElementById(id);
-	    if (button.clicked) {
-	      button.clicked = false;
-	      button.className = button.className.replace("selected", "");
-	      let updatedList = checked.filter((i) => i !== id);
-	      setChecked(updatedList);
+	// ----------- entities list pop up ------------
+	const handleOpenContact = () => {
+	    setShowEnts(true);
+	};
 
-	    } else {
-	      button.clicked = true;
-	      button.className += "selected";
-	      let updatedList = [...checked, id]
-	      setChecked(updatedList);
-	    }
-	  };
+	const handleCloseContact = () => {
+		setShowEnts(false);
+	};
+
 
 	return (
 		<div className="Home container-h-1">
@@ -51,24 +46,17 @@ export default function Home() {
            			<p className="h-sub-title">
           				Descubre los descuentos exclusivos que tus empresas tienen para ofrecerte
           			</p>
-          			<div className="container-h-b-1">
-			            {entities.map(([name, url]) => {
-			              return (
-			                <div>
-			                  <button key={name} id={name} onClick={() => {clicked(name)}} className="">
-			                    <img src={url} alt={name} />
-			                  </button>
-			                </div>
-			                )
-			            })}
-			         </div>
 			         <button onClick={() => {
-			            if (checked.length !== 0){
-			            	navigate(`/benefits/${checked.join()}`);
-			            }
+			            //if (checked.length !== 0){
+			            //	navigate(`/benefits/${checked.join()}`);
+			            //}
+			            handleOpenContact();
 			          }} className="h-button-1"> 
 			            Encuéntralos aquí
 			        </button>
+			        {showEnts && (
+		    			<EntList entities={entities} onClose={handleCloseContact} />
+				    )}
 				</div>
 				<div className="container-h-5">
 					<picture>

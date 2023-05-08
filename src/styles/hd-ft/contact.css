@@ -1,5 +1,4 @@
 
-
 /* ------ Pop Up css ------------- */
 .ct-overlay {
   position: fixed;
@@ -95,7 +94,6 @@
 }
 
 .ct-button-input:hover {
-  background-color: rgba(124, 106, 244, 1);
   border: 0px;
   border-radius: 0.2rem;
   color: #fbfaff;

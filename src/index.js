@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 // ---------------- Components ------------ //
 import Header from './routes/hd-ft/header';
 import Footer from './routes/hd-ft/footer';
-import Home from './routes/homePage/home2';
+import Home from './routes/homePage/home';
 import Admin from './routes/extras/admin';
 import Bef from './routes/benefits/benefits';
 import Credits from './routes/extras/credits';
