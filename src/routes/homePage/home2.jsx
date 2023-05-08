@@ -14,7 +14,6 @@ export default function Home() {
 	const navigate = useNavigate();
 	const [entities, setEntities] = useState([]);
 	const [checked, setChecked] = useState([]); // clicked buttonss
-	const [send, setSend] = useState(''); // sended message
 
 	useEffect(() => { //get the current entities and thier logos
 	    const fetchData = async () => {
@@ -41,40 +40,6 @@ export default function Home() {
 	      setChecked(updatedList);
 	    }
 	  };
-
-	const sendSubmit = async () => { // send user submit
-	    let text = document.getElementById('submit-input').value;
-	    if (text) {
-	      const data = {'submit': text};
-	      const url = process.env.REACT_APP_API_URL + 'submits';
-	      await fetch(url, {
-	        method: 'PATCH',
-	        headers: {
-	          'Content-Type': 'application/json'
-	        },
-	        body: JSON.stringify(data)
-	      });
-	      setSend('Se envio tu solicitud');
-	      document.getElementById('submit-input').value = '';
-	    }
-	};
-
-	const sendComment = async () => { // send user comment
-	    let text = document.getElementById('comment-input').value;
-	    if (text) {
-	      const data = {'comment': text};
-	      const url = process.env.REACT_APP_API_URL + 'comments';
-	      await fetch(url, {
-	        method: 'PATCH',
-	        headers: {
-	          'Content-Type': 'application/json'
-	        },
-	        body: JSON.stringify(data)
-	      });
-	      setSend('Se envio tu comentario');
-	      document.getElementById('comment-input').value = '';
-	    }
-	  }
 
 	return (
 		<div className="Home container-h-1">

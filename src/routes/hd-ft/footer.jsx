@@ -10,7 +10,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<Link to="/credits" className="f-credits"> Creditos </Link>
-			<p> JustPay by Munchkins - made with
+			<p> by Munchkins - made with
 				<Link to="/admin" className="h"> <FaHeart className="f-icon-1"/> </Link>
 			</p>
 	    </footer>

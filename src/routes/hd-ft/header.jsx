@@ -1,10 +1,23 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { useState, useEffect} from "react";
+// ------------- components ------------
+import Contact from "./contact"
 
 import '../../styles/hd-ft/header.css';
 const logo = 'jp_logo.png';
 
 export default function Admin() {
+	const [showContact, setShowContact] = useState(false); // contact popup
+
+	// ----------- contact pop up ------------
+	const handleOpenContact = () => {
+	    setShowContact(true);
+	};
+
+	const handleCloseContact = () => {
+		setShowContact(false);
+	};
 	
 	return (
 		<div className="container-hd-1">
@@ -12,7 +25,12 @@ export default function Admin() {
 				<img src={logo} alt="logo" className="hd-logo-img" />
 				<p className="hd-logo-text" translate="no"> Just Pay </p>
 			</Link>
-    		<button className="hd-contact-button"> Dejanos un Comentario! </button>
+    		<button className="hd-contact-button" onClick={handleOpenContact}> 
+    			Dejanos un Comentario!
+    		</button>
+    		{showContact && (
+    			<Contact onClose={handleCloseContact} />
+		    )}
 		</div>
 	)
 }

@@ -1,0 +1,144 @@
+
+
+/* ------ Pop Up css ------------- */
+.ct-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-color: rgba(0, 0, 0, 0.35);*/
+  background-color: rgba(24, 0, 38, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ct-body {
+  font-family: 'Quicksand', serif;
+  background-color: white;
+  border-radius: 0.4rem;
+  padding: 20px;
+  position: relative;
+  min-width: 30vw;
+}
+
+.ct-close {
+  position: absolute;
+  color: black;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ct-close:hover {
+  color: red;
+}
+
+.ct-content {
+  max-height: 80vh;
+  max-width: 80vw;
+  overflow: auto;
+}
+
+/* ------ containers ------------- */
+
+.ct-container-1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ct-container-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ct-container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ct-container-4 {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+/* --------- Elements ------------- */
+
+.ct-image-1 {
+  height: 15vw;
+  width: auto;
+}
+
+.ct-title-1 {
+  font-size: 1.5vw;
+}
+
+.ct-title-2 {
+  font-size: 1.5vw;
+  color: #7D6AF4;
+}
+
+.ct-input-1 {
+  width: 60%;
+  height: 1.5rem;
+}
+
+.ct-button-input:hover {
+  background-color: rgba(124, 106, 244, 1);
+  border: 0px;
+  border-radius: 0.2rem;
+  color: #fbfaff;
+  cursor: pointer;
+}
+
+.ct-button-input {
+  background-color: #fbfaff;
+  border: 1px solid rgba(124, 106, 244, 1);
+  border-radius: 0.2rem;
+  color: rgba(124, 106, 244, 1);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .ct-container-1 {
+    flex-direction: column;
+  }
+
+  .ct-container-4 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .ct-image-1 {
+    height: 25vw;
+  }
+
+  .ct-title-1,
+  .ct-title-2 {
+    font-size: 5vw;
+    margin: 0px;
+  }
+
+  .ct-input-1 {
+    margin: 1rem;
+    width: 80%;
+    height: 1rem;
+  }
+
+}
+
+
+
