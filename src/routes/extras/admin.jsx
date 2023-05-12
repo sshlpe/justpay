@@ -5,6 +5,7 @@ import '../../styles/extras/admin.css';
 
 export default function Admin() {
 	const [admin_info, setAdmin] = useState({});
+	const alt = true;
 
 	const fetchData = async () => {
 		let url = process.env.REACT_APP_API_URL + 'admin';
@@ -15,7 +16,7 @@ export default function Admin() {
 
 	useEffect(() => {
 		fetchData();
-	},);
+	},[alt]);
 
 	const update = async () => {
 		let url = process.env.REACT_APP_API_URL + 'update';
@@ -64,8 +65,8 @@ export default function Admin() {
 						<ul className="list">
 						{admin_info.submits ? Object.keys(admin_info.submits).map((id) => {
 							return (
-							<div className="small-container small-box">
-		    					<li key={'sub'+id}> {admin_info.submits[id]} </li>
+							<div className="small-container small-box" key={'sub'+id}>
+		    					<li> {admin_info.submits[id]} </li>
 		    					<button onClick={() => deleteSubmit(id)}> borrar </button>
 		    				</div>
 		    				)
@@ -85,8 +86,8 @@ export default function Admin() {
 						<ul className="list">
 						{admin_info.comments ? Object.keys(admin_info.comments).map((id) => {
 							return (
-							<div className="small-container small-box">
-		    					<li key={'sub'+id}> {admin_info.comments[id]} </li>
+							<div className="small-container small-box" key={'com'+id}>
+		    					<li> {admin_info.comments[id]} </li>
 		    					<button onClick={() => deleteComment(id)}> borrar </button>
 		    				</div>
 		    				)

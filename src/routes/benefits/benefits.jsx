@@ -21,7 +21,7 @@ export default function DscPage() {
       setcData(jsonData);
     };
     fetchData();
-  },);
+  },[selected]);
 
   const handleInputChange = (event) => {
     filtrar(event.target.value);
@@ -37,7 +37,6 @@ export default function DscPage() {
           if (text) {
             text = text.toLowerCase();
           }
-          
           return title.includes(wordLower) || text.includes(wordLower);
         });
       
