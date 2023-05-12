@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import { useState, useEffect} from "react";
+import {useState} from "react";
 // ------------- components ------------
 import Contact from "./contact"
 
 import '../../styles/hd-ft/header.css';
-const logo = 'jp_logo.png';
+const logo = 'jp_logo.webp';
 
 export default function Admin() {
 	const [showContact, setShowContact] = useState(false); // contact popup

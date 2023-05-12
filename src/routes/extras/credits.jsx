@@ -1,15 +1,14 @@
-import React from 'react';
-import {Link} from "react-router-dom";
 
-import Footer from '../hd-ft/footer';
-import Header from '../hd-ft/header';
+import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 import '../../styles/extras/credits.css';
-const box = 'box.png';
-const img1 = 'images/image1-small.png';
-const img2 = 'images/image2-small.png';
+const box = 'box.webp';
+const img1 = 'images/image1-small.webp';
+const img2 = 'images/image2-small.webp';
 
 export default function Admin() {
+	const navigate = useNavigate();
 	
 	return (
 		<div className="Credits">
@@ -28,7 +27,9 @@ export default function Admin() {
 				 	Imagen de xvector en Freepik 
 				 </a> 
 			</div>
-			<a href="javascript:history.back()"> Volver Atrás </a>
+			<button onClick={() => {navigate('/')}}> 
+	        	Volver
+	        </button>
 		</div>
 	)
 }

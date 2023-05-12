@@ -94,6 +94,10 @@
 	color: rgba(124, 106, 244, 1);
 }
 
+div.ent-container-3 > button:last-child {
+	border-bottom: 0px solid rgba(0, 0, 0, 0.5);
+}
+
 .ent-container-5 {
 	display: flex;
 	gap: 1rem;

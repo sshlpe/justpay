@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState, useEffect} from "react";
-import { useParams, useNavigate} from "react-router-dom";
+import {useState, useEffect} from "react";
+import {useParams, useNavigate} from "react-router-dom";
 import Cards from './cards';
 
 import '../../styles/benefits/bef.css';
@@ -21,7 +21,7 @@ export default function DscPage() {
       setcData(jsonData);
     };
     fetchData();
-  }, []);
+  },);
 
   const handleInputChange = (event) => {
     filtrar(event.target.value);
@@ -60,8 +60,8 @@ export default function DscPage() {
       <div>
       {Object.entries(cdata).map(([key, list]) => {
         return(
-          <div>
-            <Cards title={key} list={list} />
+          <div key={`c-${key}`}>
+            <Cards title={key} list={list}/>
           </div>
         )
       })}

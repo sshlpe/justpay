@@ -15,17 +15,17 @@ export default function Admin() {
 
 	useEffect(() => {
 		fetchData();
-	}, []);
+	},);
 
 	const update = async () => {
 		let url = process.env.REACT_APP_API_URL + 'update';
-		const response = await fetch(url);
+		await fetch(url);
 		fetchData();
 	};
 
 	const deleteComment = async (id) => {
 		let url = process.env.REACT_APP_API_URL + `comments/${id}`;
-		const response = await fetch(url, {
+		await fetch(url, {
 			method: "DELETE"
 		});
 		fetchData();
@@ -33,7 +33,7 @@ export default function Admin() {
 
 	const deleteSubmit = async (id) => {
 		let url = process.env.REACT_APP_API_URL + `submits/${id}`;
-		const response = await fetch(url, {
+		await fetch(url, {
 			method: "DELETE"
 		});
 		fetchData();

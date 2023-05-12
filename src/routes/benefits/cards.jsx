@@ -52,12 +52,12 @@ export default function Cards(section) {
 					<FaAngleLeft className="arrow left"/>
 				</div>
 				<div className="big-container" ref={scrollerRef} onScroll={scrollHandler}>
-					{slides.map((row) => {
+					{slides.map((row, rowIndex) => {
 						return(
-							<div className="card-container">
-								{row.map((elm) => {
+							<div className="card-container" key={rowIndex}>
+								{row.map((elm, elmIndex) => {
 					              return (
-					                <div className="card-item t-qsand">
+					                <div className="card-item t-qsand" key={elmIndex}>
 										<p className="title"> {elm.title} </p>
 										<p className="text"> {elm.text} </p>
 										<a href={elm.url} target="_blank" className="link button-13 c-item" 
