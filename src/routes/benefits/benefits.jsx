@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, useLocation} from "react-router-dom";
-import Cards from './cards';
+import Cards from './cards2';
 import {FaToggleOff, FaToggleOn} from "react-icons/fa";
 import { BsPlusSquareFill } from "react-icons/bs";
 
@@ -97,12 +97,10 @@ export default function DscPage() {
             </svg>
           </div> 
           ) : (
-          <div>
+          <div className="b-container-x3">
             {Object.entries(fdata).map(([key, list]) => {
               return(
-                <div key={`c-${key}`}>
-                  <Cards title={key} list={list}/>
-                </div>
+                <Cards title={key} list={list} key={`c-${key}`}/>
               )
             })}
           </div>
