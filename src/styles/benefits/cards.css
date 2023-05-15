@@ -7,28 +7,31 @@
 
 .big-container {
 	overflow-x: scroll;
+	overflow-y: hidden;
 	padding: 1rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .big-container::-webkit-scrollbar {
-  display: none;
+	/*background-color: rgba(255, 255, 255, 1);*/
+	/*color: black;*/
 }
 
 .card-container {
 	display: flex;
 	flex-flow: row;
-	height: 25vh;
 }
 
 .card-item {
-	margin: 0.3rem;
+	margin: 0.5rem;
 	padding: 0.1rem;
-	overflow-y: auto;
 	border-radius: 0.4rem;
 	text-align: center;
 	background-color: rgba(113, 128, 217, 0.1);
 	background-clip: content-box;
-	z-index: 2;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .card-item::-webkit-scrollbar {
@@ -70,15 +73,33 @@
 .arr-block-left {
 	position: absolute;
 	left: -1rem;
-	z: 1;
+	z: 10000;
+	cursor: pointer;
 }
 
 .arr-block-right {
-	/*background-color: rgba(0, 0, 0, 0.05);*/
 	position: absolute;
 	right: -1rem;
-	z: 1;
+	z: 10000;
+	cursor: pointer;
 }
+
+.cd-container-5 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.4rem;
+	margin: 0.5rem;
+}
+
+.cd-day-box {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 0.2rem;
+	min-width: 1rem;
+	padding: 0.1rem;
+}
+
 
 /* pantallas mayoes a */
 @media only screen and (min-width: 768px) {

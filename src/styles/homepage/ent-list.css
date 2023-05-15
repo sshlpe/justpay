@@ -59,9 +59,17 @@
 	gap: 0.5rem;
 	overflow-x: auto;
 	padding: 0.5rem;
-	min-height: 2rem;
+	min-height: 2.5rem;
 	border: 1px solid rgba(124, 106, 244, 0.5);
 	border-radius: 0.4rem;
+}
+
+.ent-container-2x1 {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 .ent-container-3 {
@@ -144,6 +152,17 @@ div.ent-container-3 > button:last-child {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.5);
   cursor: auto;
+}
+
+.ent-img2-icon{
+	color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: -5px;
+  right: -5px;
+}
+
+.ent-container-2x1:hover .ent-img2-icon {
+	color: black;
 }
 
 /* ------------- mobile ------------- */

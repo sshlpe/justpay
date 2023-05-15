@@ -21,6 +21,50 @@
   }
 }
 
+.b-container-x{
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.b-button-container-x1{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.b-container-icons-1 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem;
+}
+
+.b-container-icons-2{
+  display: flex;
+  overflow-y: auto;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.b-company-icon {
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.b-plus-icon {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.b-plus-icon:hover {
+  color: black;
+}
+
 /* --------------------------------------------------------------------------------- */
 /* ///////////////////////////////////////////////////////////////////////////////// */
 /* ----------------------- https://copy-paste-css.com/form-input-text ------------- */
@@ -89,5 +133,35 @@
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
+
+.b-container-x2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+svg.b-loarder {
+  width: 10em;
+  animation: 1.5s spin ease infinite;
+}
+
+.ring {
+  fill: none;
+  stroke: hsla(341, 97%, 59%, 0.3);
+  stroke-width: 2;
+}
+
+.ball {
+  fill: #fc2f70;
+  stroke: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 

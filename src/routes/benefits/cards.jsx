@@ -3,6 +3,11 @@ import {useRef} from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import '../../styles/benefits/cards.css';
 
+function sleep(s) {
+  return new Promise(resolve => setTimeout(resolve, s * 1000));
+}
+
+
 export default function Cards(section) {
 
 	const scrollerRef = useRef(null);
@@ -44,26 +49,61 @@ export default function Cards(section) {
 		arrow_left.hidden = false;
 	};
 
+	const scrollLeft = async () => {
+		if (scrollerRef.current) {
+			for (let i of Array(10).keys()) {
+				if (window.innerWidth > 500) {
+					scrollerRef.current.scrollLeft -= 50;
+				} else {
+					scrollerRef.current.scrollLeft -= 25;
+				}
+				await sleep(0.01);
+			}
+		}
+	}
+
+	const scrollRight = async () => {
+		if (scrollerRef.current) {
+			for (let i of Array(10).keys()) {
+				if (window.innerWidth > 500) {
+					scrollerRef.current.scrollLeft += 50;
+				} else {
+					scrollerRef.current.scrollLeft += 25;
+				}
+				await sleep(0.01);
+			}
+		}
+	}
+
 	return (
 		<div>
 			<p className="sup-title t-qsand"> {section.title} </p>
 			<div className="large-container"> 
-				<div id={section.title+"-arrowleft"} hidden={true} className="arr-block-left">
+				<div id={section.title+"-arrowleft"} hidden={true} className="arr-block-left" onClick={scrollLeft} >
 					<FaAngleLeft className="arrow left"/>
 				</div>
 				<div className="big-container" ref={scrollerRef} onScroll={scrollHandler}>
 					{slides.map((row, rowIndex) => {
 						return(
-							<div className="card-container" key={rowIndex}>
+							<div className="card-container" key={`c-${rowIndex}`}>
 								{row.map((elm, elmIndex) => {
 					              return (
-					                <div className="card-item t-qsand" key={elmIndex}>
+					                <div className="card-item t-qsand" key={`ci-${elmIndex}x${rowIndex}`}>
 										<p className="title"> {elm.title} </p>
 										<p className="text"> {elm.text} </p>
 										<a href={elm.url} target="_blank" className="link button-13 c-item" 
 											role="button" rel="noopener noreferrer">
 											Ir a la pagina
 										</a>
+										<div className="cd-container-5">
+											{elm.days.map((elm, elmIndex) => {
+												return(
+													<div className="cd-day-box" key={`c-d-${elmIndex}`}>
+														{(elm == 'no info' ? elm : elm.slice(0,2))}
+													</div>
+												)
+											})}
+										</div>
 					                </div>
 					              )
 					            })}
@@ -74,7 +114,7 @@ export default function Cards(section) {
 						)
 					})}
 				</div>
-				<div id={section.title+"-arrowright"} className="arr-block-right">
+				<div id={section.title+"-arrowright"} className="arr-block-right" onClick={scrollRight} >
 					<FaAngleRight className="arrow right" />
 				</div>
 			</div>
