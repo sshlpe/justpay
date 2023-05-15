@@ -1,4 +1,5 @@
 
+/* ------------ containers ----------- */
 .cd-container-1 {
 	display: flex;
 	flex-direction: column;
@@ -55,6 +56,12 @@
 	align-items: center;
 }
 
+/* ------------ elements ----------- */
+
+.cd-title-1 {
+	font-size: 1.5vw;
+}
+
 .cd-item-title {
 	font-size: 1.5vw;
 	text-align: center;
@@ -104,9 +111,8 @@
 	}
 
 	.cd-item-container-1 {
-		min-width: 13rem;
-		height: 18rem;
-
+		min-width: 12rem;
+		height: 17rem;
 	}
 
 	.cd-item-title {
@@ -123,6 +129,10 @@
 
 	.cd-item-days {
 		font-size: 3vw;
+	}
+
+	.cd-title-1 {
+		font-size: 4vw;
 	}
 }
 

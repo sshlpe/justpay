@@ -76,7 +76,7 @@ export default function Cards(section) {
 
 	return (
 		<div className="cd-container-1">
-			<h2> {section.title} </h2>
+			<h2 className="cd-title-1" > {section.title} </h2>
 			<div className="cd-container-2">
 				<div id={section.title+"-arrowleft"} hidden={true} className="cd-arrow" onClick={scrollLeft} >
 					<FaAngleLeft className="arrow left"/>
