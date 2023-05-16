@@ -79,7 +79,7 @@ export default function DiscountPage () {
           	</div>
           	<div className="bf-container-2">
           		<div className="bf-container-3" >
-	            	<input type="text" placeholder="Qué buscas?" onChange={e => setfWord(e.target.value)} 
+	            	<input type="text" placeholder="¿Qué buscas?" onChange={e => setfWord(e.target.value)} 
 	            	className="bf-input-txt"/>
 	            	< BiSearchAlt />
 	            </div>

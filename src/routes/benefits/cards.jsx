@@ -91,6 +91,27 @@ export default function Cards(section) {
 									return (
 										<div className="cd-item-container-1">
 											<div className="cd-item-container-2">
+												{(elm.image) ? ( 
+														//<img src={elm.image}  className="cd-item-img"/>
+														<div class="cd-item-img">
+														  <img src={elm.image} alt="Your image" />
+														  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+														    <path fill="#f7f7f7" fill-opacity="1" 
+															  	d="M0,96L48,112C96,128,192,160,288,176C384,192,480,192,576,176C672,160,768,128,864,128C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+															  </path>
+														  </svg>
+														</div>
+													):(
+														<div class="cd-item-img">
+														  <p className="cd-item-noimg"> </p>
+														  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+														    <path fill="#f7f7f7" fill-opacity="1" 
+															  	d="M0,96L48,112C96,128,192,160,288,176C384,192,480,192,576,176C672,160,768,128,864,128C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+															  </path>
+														  </svg>
+														</div>
+													)
+												}
 												<h3 className="cd-item-title"> {elm.title} </h3>
 												<p className="cd-item-info"> {elm.text} </p>
 												<a href={elm.url} target="_blank" className="cd-item-link" 
