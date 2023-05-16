@@ -5,7 +5,7 @@ import Header from './routes/hd-ft/header';
 import Footer from './routes/hd-ft/footer';
 import Home from './routes/homePage/home';
 import Admin from './routes/extras/admin';
-import Bef from './routes/benefits/benefits';
+import DiscountPage from './routes/benefits/benefits2';
 import Credits from './routes/extras/credits';
 
 import Test from './routes/extras/test';
@@ -24,7 +24,7 @@ root.render(
       <div className="container-h-0">
         <Routes>
           <Route path="" element={<Home/>}/>
-          <Route path="benefits/:selected" element={<Bef/>} />
+          <Route path="benefits/:selected" element={<DiscountPage/>} />
           <Route path="admin" element={<Admin/>} />
           <Route path="credits" element={<Credits/>} />
           <Route path="test" element={<Test/>} />

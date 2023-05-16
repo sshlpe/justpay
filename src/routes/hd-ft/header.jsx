@@ -26,7 +26,7 @@ export default function Admin() {
 				<p className="hd-logo-text" translate="no"> Just Pay </p>
 			</Link>
     		<button className="hd-contact-button" onClick={handleOpenContact}> 
-    			Contactanos!
+    			Contáctanos!
     		</button>
     		{showContact && (
     			<Contact onClose={handleCloseContact} />

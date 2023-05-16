@@ -1,20 +1,17 @@
 import React from 'react';
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, useLocation} from "react-router-dom";
-import Cards from './cards2';
+import Cards from './cards';
 import {FaToggleOff, FaToggleOn} from "react-icons/fa";
 import { BsPlusSquareFill } from "react-icons/bs";
 
-
 import '../../styles/benefits/bef.css';
-
 
 const getDate = () => {
   const dias = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
   const fecha = new Date();
   return dias[fecha.getDay()];
 };
-
 
 export default function DscPage() {
 
