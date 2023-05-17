@@ -84,7 +84,7 @@ export default function DiscountPage () {
 	            	< BiSearchAlt />
 	            </div>
 	            <button onClick={()=> {setToday(!today)}} className="bf-button-container"> 
-	            	Hoy  {today ? ( <FaToggleOn className="ent-check-icon" /> ) : (<FaToggleOff className="" /> )}
+	            	Hoy  {today ? ( <FaToggleOn className="bf-ent-check-icon" /> ) : (<FaToggleOff className="" /> )}
 	            </button>
 	            <button className="bf-button-container"> 
 	            	{(window.innerWidth > 500 ) ? 'Categorías' : ' ' }

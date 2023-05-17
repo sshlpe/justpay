@@ -127,8 +127,8 @@
 
 .cd-item-img svg {
   position: absolute;
-  bottom: 0px;
-  width: 100%;
+  bottom: -1px;
+  width: 101%;
   height: auto;
 }
 
