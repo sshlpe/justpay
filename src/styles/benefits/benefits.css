@@ -76,9 +76,7 @@
 	justify-content: center;
 	gap: 1rem;
 
-	font-size: 3rem;
 	min-height: 3rem;
-
 	
 	color: black;
 	background-color: #cff5ff;
@@ -153,7 +151,6 @@
 
 	.bf-button-container {
 		min-height: 2rem;
-		font-size: 3vw;
 	}
 
 	.bf-company-icon {
