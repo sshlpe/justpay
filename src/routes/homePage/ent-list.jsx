@@ -27,7 +27,6 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 		return null;
 	}
 	const clickedButton = (id, url) => { // check or uncheck buttons
-		console.log(id);
 	    let button = document.getElementById(id);
 	    if (button.clicked) {
 	    	button.clicked = false;

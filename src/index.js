@@ -12,14 +12,15 @@ import Test from './routes/extras/test';
 
 
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter ,Routes, Route } from "react-router-dom";
 
 import "./styles/index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+  {/*  basename={process.env.PUBLIC_URL} */}
+    <HashRouter>
       <Header/>
       <div className="container-h-0">
         <Routes>
@@ -31,7 +32,7 @@ root.render(
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
