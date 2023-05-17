@@ -73,14 +73,19 @@
 .bf-button-container {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 1rem;
+
 	font-size: 1rem;
 	min-height: 3rem;
+
+	
 	color: black;
 	background-color: #cff5ff;
 	border: 1px solid rgb(4, 116, 120);
 	border-radius: 0.4rem;
 	cursor: pointer;
+	min-width: 4rem;
 }
 
 .bf-input-txt {
@@ -105,7 +110,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
-	width: 95%;
+	width: 90%;
 }
 
 .bf-loarder {

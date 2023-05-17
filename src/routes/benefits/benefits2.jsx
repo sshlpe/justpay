@@ -87,7 +87,7 @@ export default function DiscountPage () {
 	            	Hoy  {today ? ( <FaToggleOn className="ent-check-icon" /> ) : (<FaToggleOff className="" /> )}
 	            </button>
 	            <button className="bf-button-container"> 
-	            	Categorías
+	            	{(window.innerWidth > 500 ) ? 'Categorías' : ' ' }
 	            	< BiFilterAlt />
 	            </button>
 			</div>

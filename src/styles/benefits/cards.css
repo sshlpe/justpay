@@ -5,8 +5,9 @@
 	flex-direction: column;
 	align-items: center;
 	font-family: 'Quicksand', serif;
-	background-color: rgba(255, 255, 255, 0.4);
-	border: 1px solid  rgba(0, 0, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0);
+	/*border: 1px solid  rgba(0, 0, 0, 0.4);*/
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 	border-radius: 0.5rem;
 	width: 100%;
 }
@@ -28,15 +29,18 @@
 .cd-container-4 {
 	display: flex;
 	gap: 1rem;
-	margin: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
 }
 
 .cd-item-container-1 {
-	min-width: 17vw;
-	max-width: 17vw;
+	min-width: 15vw;
+	max-width: 15vw;
 	height: 21vw;
 
-	border: 1px solid rgba(0, 0, 0, 0.4);
+	/*border: 1px solid rgba(0, 0, 0, 0.4);*/
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	background-color: #f7f7f7;
 	border-radius: 0.4rem;
 
@@ -49,6 +53,10 @@
 
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+.cd-item-container-1::-webkit-scrollbar {
+    display: none;
 }
 
 .cd-item-container-2 {
@@ -65,13 +73,13 @@
 }
 
 .cd-item-title {
-	font-size: 1.5vw;
+	font-size: 1.1vw;
 	text-align: center;
 	color: rgba(124, 106, 244, 0.9);
 }
 
 .cd-item-info {
-	font-size: 1vw;
+	font-size: 0.8vw;
 	text-align: center;
 }
 
@@ -138,11 +146,11 @@
 
 /* ----------- movile ----------- */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 500px) {
 
 	.cd-item-container-1 {
-		min-width: 53vw;
-		max-width: 53vw;
+		min-width: 50vw;
+		max-width: 50vw;
 		height: 65vw;
 	}
 
@@ -171,5 +179,85 @@
 		font-size: 4vw;
 	}
 }
+
+
+@media only screen and (max-width: 500px) {
+
+	.cd-item-container-1 {
+		min-width: 50vw;
+		max-width: 50vw;
+		height: 65vw;
+	}
+
+	.cd-item-title {
+		font-size: 4vw;
+	}
+
+	.cd-item-info {
+		font-size: 2.5vw;
+	}
+
+	.cd-item-link {
+		font-size: 3vw;
+	}
+
+	.cd-item-container-days {
+		gap: 0.2rem;
+	}
+
+	.cd-item-days {
+		font-size: 3vw;
+
+	}
+
+	.cd-title-1 {
+		font-size: 4vw;
+	}
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 999px) {
+	.cd-item-days {
+		font-size: 0.5vw;
+		border-radius: 0.1rem;
+		min-width: 0.5rem;
+	}
+
+	.cd-item-container-days {
+		gap: 0.1rem;
+	}
+
+	.cd-item-noimg {
+		height: 2rem;
+	}
+
+	.cd-item-img svg {
+		bottom: 0px;
+	}
+
+	.cd-item-img {
+		max-height: 2.5rem;
+	}
+
+	.cd-item-container-1 {
+		position: relative;
+		min-width: 20vw;
+		max-width: 20vw;
+		height: 30vw;
+	}
+
+	.cd-item-title {
+		/*position: absolute;
+		top: 4vw;*/
+		font-size: 2vw;
+	}
+
+	.cd-item-info {
+		font-size: 1.1vw;
+	}
+}
+
+
+
 
 
