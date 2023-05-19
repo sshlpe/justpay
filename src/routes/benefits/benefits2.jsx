@@ -64,6 +64,22 @@ export default function DiscountPage () {
 		setfData(filter_data);
 	}, [fword, today]);
 
+	const setCategoryButton = () => {
+		if (window.innerWidth > 500 ) {
+			return (
+				<button className="bf-button-container">
+					<p> Categorías </p>
+					< BiFilterAlt />
+				</button>
+			);
+		}
+		return (
+			<button className="bf-button-container">
+					< BiFilterAlt />
+			</button>
+		);
+	}
+
 	return (
 		<div className="bf-container-1" >
 			<h1 className="bf-main-title"> Tus Empresas ofrecen los siguientes beneficios </h1>
@@ -84,12 +100,9 @@ export default function DiscountPage () {
 	            	< BiSearchAlt />
 	            </div>
 	            <button onClick={()=> {setToday(!today)}} className="bf-button-container"> 
-	            	Hoy  {today ? ( <FaToggleOn className="bf-ent-check-icon" /> ) : (<FaToggleOff className="" /> )}
+	            	hoy  {today ? ( <FaToggleOn /> ) : (<FaToggleOff /> )}
 	            </button>
-	            <button className="bf-button-container"> 
-	            	{(window.innerWidth > 500 ) ? 'Categorías' : ' ' }
-	            	< BiFilterAlt />
-	            </button>
+	            {setCategoryButton()}
 			</div>
 			{loading ? (
 				<div className="bf-container-4">

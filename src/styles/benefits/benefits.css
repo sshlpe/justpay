@@ -76,18 +76,17 @@
 	justify-content: center;
 	gap: 1rem;
 
-	min-height: 3rem;
-	
+	height: 2rem;
+
 	color: black;
 	background-color: #cff5ff;
 	border: 1px solid rgb(4, 116, 120);
 	border-radius: 0.4rem;
 	cursor: pointer;
-	min-width: 4rem;
 }
 
 .bf-input-txt {
-	min-height: 3rem;
+	height: 2rem;
 	width: 80%;
 	padding: 0px;
 	border: none;
@@ -109,10 +108,6 @@
 	align-items: center;
 	gap: 1rem;
 	width: 90%;
-}
-
-.bf-ent-check-icon {
-	width: 1rem;
 }
 
 .bf-loarder {
@@ -150,7 +145,7 @@
 	}
 
 	.bf-button-container {
-		min-height: 2rem;
+		font-size: 3vw;
 	}
 
 	.bf-company-icon {
