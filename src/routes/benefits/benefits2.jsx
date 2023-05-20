@@ -20,15 +20,15 @@ export default function DiscountPage () {
 	const navigate = useNavigate();
 	const {selected} = useParams(); // companies selected
 	const location = useLocation(); 
-	const icons = location.state.icons; // icons of selected companies
+	const [icons, setIcons] = useState([]) ; // icons of selected companies
 
 	const [data, setData] = useState([]);
 	const [fdata, setfData] = useState([]);
 	const [fword, setfWord] = useState('');
-  	const [today, setToday] = useState(false);
-  	const [loading, setLoading] = useState(false);
+  const [today, setToday] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  	useEffect(() => {
+  useEffect(() => {
 		const fetchData = async () => {
 			let url = process.env.REACT_APP_API_URL + `discounts/${selected}`;
 			setLoading(true);
@@ -64,6 +64,30 @@ export default function DiscountPage () {
 		setfData(filter_data);
 	}, [fword, today]);
 
+	useEffect(() => {
+    const fetchIcons = async () => {
+      if (location.state && location.state.icons) {
+        setIcons(location.state.icons);
+      } else {
+        try {
+        	let url = process.env.REACT_APP_API_URL + 'entities';
+          const response = await fetch(url);;
+          const jsonData = await response.json();
+          let elms = [];
+          selected.split(',').map(key => {
+			      elms.push(jsonData[key]);
+			    });
+          setIcons(elms);
+        } catch (error) {
+          console.error('Error al cargar los iconos:', error);
+        }
+      }
+    };
+
+    fetchIcons();
+  }, [location.state]);
+
+
 	const setCategoryButton = () => {
 		if (window.innerWidth > 500 ) {
 			return (
@@ -86,11 +110,9 @@ export default function DiscountPage () {
 			<div className="bf-container-icons" >
 				< BsPlusSquareFill className="bf-plus-icon" />
 				<div className="bf-container-icons2" >
-					{icons.map((url, iconIndex) => {
-						return (
-							<img src={url} className="bf-company-icon" alt='selected'/>
-						);
-					})}
+					{icons.map((url, index) => (
+		          <img src={url} alt="Icono" key={index} className="bf-company-icon" />
+		        ))}
 				</div>
           	</div>
           	<div className="bf-container-2">
