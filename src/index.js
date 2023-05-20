@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   {/*  basename={process.env.PUBLIC_URL} */}
-    <HashRouter>
+    <BrowserRouter>
       <Header/>
       <div className="container-h-0">
         <Routes>
@@ -32,7 +32,7 @@ root.render(
         </Routes>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
