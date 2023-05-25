@@ -1,6 +1,5 @@
 import React from 'react';
 import {useState, useEffect} from "react";
-//import {useParams, useNavigate, useLocation} from "react-router-dom";
 import {useParams, useNavigate} from "react-router-dom";
 // ----------- Iconcs ----------- //
 import {FaToggleOff, FaToggleOn} from "react-icons/fa";
@@ -20,7 +19,6 @@ const getDate = () => {
 export default function DiscountPage () {
 	const navigate = useNavigate();
 	const {selected} = useParams(); // companies selected
-	//const location = useLocation(); 
 	const [icons, setIcons] = useState([]) ; // icons of selected companies
 
 	const [data, setData] = useState([]);
@@ -67,22 +65,14 @@ export default function DiscountPage () {
 
 	useEffect(() => {
     const fetchIcons = async () => {
-      /*if (location.state && location.state.icons) {
-        setIcons(location.state.icons);
-      } else {*/
-      try {
-      	let url = process.env.REACT_APP_API_URL + 'entities';
-        const response = await fetch(url);;
-        const jsonData = await response.json();
-        let elms = [];
-        selected.split(',').map(key => {
-		      elms.push(jsonData[key]);
-		    });
-        setIcons(elms);
-      } catch (error) {
-        console.error('Error al cargar los iconos:', error);
-      }
-      //}
+    	let url = process.env.REACT_APP_API_URL + 'entities';
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      let elms = [];
+      selected.split(',').map(key => {
+	      elms.push(jsonData[key]);
+	    });
+      setIcons(elms);
     };
     fetchIcons();
   }, [selected]);

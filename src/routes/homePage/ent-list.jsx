@@ -69,10 +69,7 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 	};
 
 	const handlerRedirect = () => {
-		navigate(`/benefits/${checked.join()}`, { 
-			state: { "entities": entities,
-					"icons":  checkedIcons} 
-		});
+		navigate(`/benefits/${checked.join()}`);
 	}
 
 	return (
