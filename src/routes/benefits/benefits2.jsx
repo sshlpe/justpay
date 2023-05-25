@@ -83,7 +83,6 @@ export default function DiscountPage () {
         }
       }
     };
-
     fetchIcons();
   }, [location.state]);
 
@@ -122,7 +121,7 @@ export default function DiscountPage () {
 	            	< BiSearchAlt />
 	            </div>
 	            <button onClick={()=> {setToday(!today)}} className="bf-button-container"> 
-	            	hoy  {today ? ( <FaToggleOn /> ) : (<FaToggleOff /> )}
+	            	hoy  {today ? ( <FaToggleOn className="bf-purpleicon" /> ) : (<FaToggleOff /> )}
 	            </button>
 	            {setCategoryButton()}
 			</div>

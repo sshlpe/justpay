@@ -110,6 +110,10 @@
 	width: 90%;
 }
 
+.bf-purpleicon {
+	color: rgba(124, 106, 244, 0.9);
+}
+
 .bf-loarder {
   width: 10em;
   animation: 1.5s spin ease infinite;
