@@ -84,7 +84,7 @@ export default function DiscountPage () {
       }
     };
     fetchIcons();
-  }, [location.state]);
+  }, [location]);
 
 
 	const setCategoryButton = () => {
