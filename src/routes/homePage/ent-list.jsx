@@ -99,7 +99,8 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 	        		<div className="ent-container-3">
 	        			{entities.map(([name, url]) => {
 							return (
-								<button key={`l-${name}`} id={name} onClick={() => {clickedButton(name, url)}} className="ent-container-4">
+								<button key={`l-${name}`} id={name} onClick={() => {clickedButton(name, url)}} 
+									className="ent-container-4">
 									<div className="ent-container-5">
 										<img src={url} alt={name} className="ent-img-1"/>
 										<p className="test"> {name} </p>
