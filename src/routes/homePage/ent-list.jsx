@@ -27,26 +27,26 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 		return null;
 	}
 	const clickedButton = (id, url) => { // check or uncheck buttons
-	    let button = document.getElementById(id);
-	    if (button.clicked) {
-	    	button.clicked = false;
-	    	let updatedList = checked.filter((i) => i !== id);
-	    	let updatedIconList = checkedIcons.filter((i) => i !== url);
-	    	setChecked(updatedList);
-	    	setcheckedIcons(updatedIconList);
+		let button = document.getElementById(id);
+		if (button.clicked) {
+			button.clicked = false;
+			let updatedList = checked.filter((i) => i !== id);
+			let updatedIconList = checkedIcons.filter((i) => i !== url);
+			setChecked(updatedList);
+			setcheckedIcons(updatedIconList);
 
-	    } else {
-	    	button.clicked = true;
-	    	let updatedList = [...checked, id];
-	    	let updatedIconList = [...checkedIcons, url];
-	    	setChecked(updatedList);
-	    	setcheckedIcons(updatedIconList);
-	    }
+		} else {
+			button.clicked = true;
+			let updatedList = [...checked, id];
+			let updatedIconList = [...checkedIcons, url];
+			setChecked(updatedList);
+			setcheckedIcons(updatedIconList);
+		}
 
-	    setIcons((prevIcons) => ({
-	        ...prevIcons,
-	        [id]: prevIcons[id] === 'checkCircle' ? 'circle' : 'checkCircle',
-	    }));
+		setIcons((prevIcons) => ({
+			...prevIcons,
+			[id]: prevIcons[id] === 'checkCircle' ? 'circle' : 'checkCircle',
+		}));
 	};
 
 	const clickedIcon = async (id) => {
@@ -60,12 +60,12 @@ export default function EntList ({entities, onClose, children}) { // pop list of
 		button.clicked = false;
 
 		setIcons((prevIcons) => ({ // update icons
-	        ...prevIcons,
-	        [button_id]: prevIcons[button_id] === 'checkCircle' ? 'circle' : 'checkCircle',
-	    }));
+			...prevIcons,
+			[button_id]: prevIcons[button_id] === 'checkCircle' ? 'circle' : 'checkCircle',
+		}));
 
 		setChecked(updatedList);
-	    setcheckedIcons(updatedIconList);
+		setcheckedIcons(updatedIconList);
 	};
 
 	const handlerRedirect = () => {
