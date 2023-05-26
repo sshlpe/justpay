@@ -26,6 +26,7 @@ export default function DiscountPage () {
 	const [fword, setfWord] = useState('');
   const [today, setToday] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [fixed, setFixed] = useState("");
 
   useEffect(() => {
 		const fetchData = async () => {
@@ -77,6 +78,21 @@ export default function DiscountPage () {
     fetchIcons();
   }, [selected]);
 
+  useEffect(() => {
+  	window.addEventListener('scroll', stickNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 100 ? setFixed('fixed') : setFixed('');
+    }
+  };
+
 	const setCategoryButton = () => {
 		if (window.innerWidth > 500 ) {
 			return (
@@ -96,6 +112,7 @@ export default function DiscountPage () {
 	return (
 		<div className="bf-container-1" >
 			<h1 className="bf-main-title"> Tus Empresas ofrecen los siguientes beneficios </h1>
+			<div className={`bf-container-1x2 ${fixed}`}>
 			<div className="bf-container-icons" >
 				< BsPlusSquareFill className="bf-plus-icon" />
 				<div className="bf-container-icons2" >
@@ -103,18 +120,24 @@ export default function DiscountPage () {
 		          <img src={url} alt="Icono" key={index} className="bf-company-icon" />
 		        ))}
 				</div>
-          	</div>
-          	<div className="bf-container-2">
-          		<div className="bf-container-3" >
-	            	<input type="text" placeholder="¿Qué buscas?" onChange={e => setfWord(e.target.value)} 
-	            	className="bf-input-txt"/>
-	            	< BiSearchAlt />
-	            </div>
-	            <button onClick={()=> {setToday(!today)}} className="bf-button-container"> 
-	            	hoy  {today ? ( <FaToggleOn className="bf-purpleicon" /> ) : (<FaToggleOff /> )}
-	            </button>
-	            {setCategoryButton()}
 			</div>
+				<div className="bf-container-2">
+					<div className="bf-container-3" >
+						<input type="text" placeholder="¿Qué buscas?" onChange={e => setfWord(e.target.value)} 
+							className="bf-input-txt"/> 
+						< BiSearchAlt />
+					</div>
+					<button onClick={()=> {setToday(!today)}} className="bf-button-container"> 
+						hoy  {today ? ( <FaToggleOn className="bf-purpleicon" /> ) : (<FaToggleOff /> )}
+						</button>
+						{setCategoryButton()}
+				</div>
+			</div>
+			{(fixed == "fixed") ? (
+				<div className="bf-space-fix"> </div>
+				) : (
+				<div> </div>
+				)}
 			{loading ? (
 				<div className="bf-container-4">
 					<svg viewBox="0 0 50 50" className="bf-loarder">
@@ -130,7 +153,7 @@ export default function DiscountPage () {
 						)
 					})}
 				</div>
-			) }
+			)}
 			<button onClick={() => {navigate('/')}}> 
 				Volver
 			</button>

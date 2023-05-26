@@ -7,6 +7,31 @@
 	gap: 1rem;
 }
 
+.bf-container-1x2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px;
+	gap: 1rem;
+	width: 100vw;
+	transition: top 20s ease-in-out;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
+	background-color: #FAF0F7;
+}
+
+.bf-space-fix {
+	height: 110px;
+}
+
+
 .bf-main-title {
 	font-family: 'Quicksand', serif;
 	font-size: 2vw;
@@ -107,7 +132,8 @@
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
-	width: 90%;
+	width: 95%;
+
 }
 
 .bf-purpleicon {
