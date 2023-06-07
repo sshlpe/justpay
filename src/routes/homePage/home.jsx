@@ -4,8 +4,8 @@ import { useState, useEffect} from "react";
 import EntList from './ent-list';
 // ----- files -------
 import '../../styles/homepage/home.css';
-const box = 'box.webp';
-const small_box = 'small-box.webp'
+const box = 'images/home_image.webp'; //'box.webp';
+const small_box = 'images/home_image2.webp'; //'small-box.webp'
 
 export default function Home() {
 	const [entities, setEntities] = useState([]);
