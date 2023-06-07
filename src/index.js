@@ -5,7 +5,7 @@ import Header from './routes/hd-ft/header';
 import Footer from './routes/hd-ft/footer';
 import Home from './routes/homePage/home';
 import Admin from './routes/extras/admin';
-import DiscountPage from './routes/benefits/benefits2';
+import DiscountPage from './routes/benefits/benefits';
 import Credits from './routes/extras/credits';
 
 import Test from './routes/extras/test';
