@@ -3,7 +3,7 @@ import React from 'react';
 import {useNavigate} from "react-router-dom";
 
 import '../../styles/extras/credits.css';
-const box = 'box.webp';
+const box = 'images/home_image2.webp';
 const img1 = 'images/image1-small.webp';
 const img2 = 'images/image2-small.webp';
 
