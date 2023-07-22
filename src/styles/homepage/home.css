@@ -106,7 +106,8 @@
 .h-button-1 {
 	height: 2.5rem;
 	border-radius: 0.3rem;
-	background-color: #EA4C89;
+	/*background-color: #EA4C89;*/
+	background-image: linear-gradient(to right, rgb(101,110,248) , rgb(	255, 102, 196));
 	border-style: none;
 	box-sizing: border-box;
 	font-family: 'Quicksand', serif;
@@ -119,7 +120,7 @@
 
 .h-button-1:hover,
 .h-button-1:focus {
-  background-color: #F082AC;
+  opacity: 0.8;
 }
 
 /* ----------------------- Mobile ---------------- */

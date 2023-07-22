@@ -11,6 +11,8 @@ function sleep(s) {
 
 export default function Cards(section) {
 
+	console.log(section.icon);
+
 	const scrollerRef = useRef(null);
 
 	const slides = []
@@ -78,7 +80,10 @@ export default function Cards(section) {
 
 	return (
 		<div className="cd-container-1">
-			<h2 className="cd-title-1" > {section.title} : {section.list.length} </h2>
+			<div className="cd-container-1x2" >
+				<img src={section.icon} alt="Icono" key={'a'} className="sb-company-icon" />
+				<h2 className="cd-title-1" > {section.title} : {section.list.length} </h2>
+			</div>
 			<div className="cd-container-2">
 				<div id={section.title+"-arrowleft"} hidden={true} className="cd-arrow" onClick={scrollLeft} >
 					<FaAngleLeft className="arrow left"/>

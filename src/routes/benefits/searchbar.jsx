@@ -8,8 +8,8 @@ import { BiSearchAlt, BiFilterAlt } from "react-icons/bi";
 // ----------- Styles ----------- //
 import '../../styles/benefits/searchbar.css';
 
-export default function SearchBar ({selected, setfWord, today, setToday, fixed, setFixed, children}) {
-	const [icons, setIcons] = useState([]);
+export default function SearchBar ({selected, setfWord, today, setToday, fixed, setFixed, icons, setIcons, children}) {
+	//const [icons, setIcons] = useState([]);
 	const [entities, setEntities] = useState([]);
 
 	useEffect(() => {

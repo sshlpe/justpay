@@ -23,6 +23,7 @@ export default function DiscountPage () {
   const [today, setToday] = useState(false); // today? filter
   const [loading, setLoading] = useState(false); // loading animation
   const [fixed, setFixed] = useState(""); // fixed search bar
+  const [icons, setIcons] = useState([]);
  
   useEffect(() => {
 		const fetchData = async () => {
@@ -64,7 +65,8 @@ export default function DiscountPage () {
 		<div className="bf-container-1" >
 			<h1 className="bf-main-title"> Tus Empresas ofrecen los siguientes beneficios </h1>
 			<SearchBar selected={selected} setfWord={setfWord} today={today} 
-								setToday={setToday} fixed={fixed} setFixed={setFixed} />
+								setToday={setToday} fixed={fixed} setFixed={setFixed} 
+								icons={icons} setIcons={setIcons} />
 			{(fixed == "fixed") ? (
 				<div className="bf-space-fix"> </div>
 				) : (
@@ -79,9 +81,9 @@ export default function DiscountPage () {
 				</div> 
 				) : (
 				<div className="bf-container-5">
-					{Object.entries(fdata).map(([key, list]) => {
+					{Object.entries(fdata).map(([key, list], index) => {
 						return(
-							<Cards title={key} list={list} key={`c-${key}`}/>
+							<Cards title={key} list={list} key={`c-${key}`} icon={icons[index]}/>
 						)
 					})}
 				</div>

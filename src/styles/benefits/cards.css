@@ -11,6 +11,13 @@
 	width: 100%;
 }
 
+.cd-container-1x2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
 .cd-container-2 {
 	display: flex;
 	align-items: center;

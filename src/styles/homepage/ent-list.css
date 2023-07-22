@@ -128,11 +128,6 @@ div.ent-container-3 > button:last-child {
 	color: rgba(124, 106, 244, 1);
 }
 
-.ent-img-3 {
-	height: 6vw;
-	width: auto;
-}
-
 .ent-button-1 {
 	height: 2.5rem;
 	font-family: 'Quicksand', serif;
@@ -165,6 +160,53 @@ div.ent-container-3 > button:last-child {
 	color: black;
 }
 
+.ent-container-2x2 {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.ent-container-2x3 {
+	display: flex;
+	gap: 1vw;
+	align-items: center;
+}
+
+.ent-img-3 {
+	height: 6vw;
+	width: auto;
+}
+
+.ent-title {
+	font-size: 1vw;
+}
+
+.ent-filter {
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+	padding: 0.5rem;
+	align-items: center;
+	height: 1.7rem;
+	border-radius: 0.5rem;
+	width: 30%;
+}
+
+.ent-filter:hover {
+	border: 1px solid rgb(64, 173, 157);
+	color: rgb(64, 173, 157);
+}
+
+.ent-filter-input {
+	border:0;
+	outline: none;
+	width: 100%;
+}
+
+.ent-filter-icon {
+}
+
 /* ------------- mobile ------------- */
 
 @media only screen and (max-width: 770px) {
@@ -182,6 +224,21 @@ div.ent-container-3 > button:last-child {
 
 	.ent-img-3 {
 		height: 15vw;
+	}
+
+	.ent-title {
+		font-size: 4vw;
+		width: 50%;
+	}
+
+	.ent-filter {
+		font-size: 3vw;
+		width: 25vw;
+	}
+
+	.ent-filter-input {
+		font-size: 3vw;
+		width: 80%;
 	}
 }
 

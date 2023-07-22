@@ -23,7 +23,10 @@ export default function Admin() {
 		<div className="container-hd-1">
 			<Link to="/" className="container-hd-2">
 				<img src={logo} alt="logo" className="hd-logo-img" />
-				<p className="hd-logo-text" translate="no"> Just Pay </p>
+				<div className="hd-logo-text-container">
+					<p className="hd-logo-text" translate="no"> Just </p> 
+					<p className="hd-logo-text-purple" translate="no"> Pay </p>
+				</div>
 			</Link>
     		<button className="hd-contact-button" onClick={handleOpenContact}> 
     			Contáctanos!

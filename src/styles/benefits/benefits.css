@@ -8,7 +8,7 @@
 }
 
 .bf-space-fix {
-	height: 110px;
+	height: 50px;
 }
 
 .bf-main-title {
@@ -76,6 +76,10 @@
 
 	.bf-plus-icon {
 		font-size: 7vw;
+	}
+
+	.bf-space-fix {
+		height: 110px;
 	}
 }
 

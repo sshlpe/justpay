@@ -25,10 +25,22 @@
 	border-radius: 0.4rem;
 }
 
+.hd-logo-text-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
 .hd-logo-text {
   margin: 0px;
   padding: 0px;
   color: black;
+}
+
+.hd-logo-text-purple {
+	margin: 0px;
+  padding: 0px;
+	color: rgba(124, 106, 244, 1);
 }
 
 .hd-contact-button {

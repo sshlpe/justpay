@@ -1,11 +1,10 @@
 
 .sb-container-1x2 {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	margin: 0px;
-	gap: 1rem;
-	width: 100vw;
+	gap: 0.5rem;
+	width: 95vw;
 	transition: top 20s ease-in-out;
 }
 
@@ -14,17 +13,24 @@
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	padding-top: 0.7rem;
-	padding-bottom: 0.7rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	background-color: #FAF0F7;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
 }
 
 .sb-container-icons {
-	width: 95%;
+	width: 50%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.3rem;
+
+    border: 1px solid rgb(4, 116, 120);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
 
 
@@ -33,13 +39,9 @@
 	overflow-y: auto;
 	width: 100%;
 	gap: 0.3rem;
-
-	border-top: 1px solid rgb(4, 116, 120);
-    border-bottom: 1px solid rgb(4, 116, 120);
-
-	padding: 0.5rem;
 	width: 80%;
 }
+
 
 .sb-company-icon {
 	height: 2rem;
@@ -73,7 +75,7 @@
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	background-color: #cff5ff;
-	width: 80%;
+	width: 60%;
 	color: black;
 }
 
@@ -104,5 +106,31 @@
 
 .sb-purpleicon {
 	color: rgba(124, 106, 244, 0.9);
+}
+
+@media only screen and (max-width: 500px) {
+	.sb-container-1x2 {
+		flex-direction: column;
+	}
+
+	.sb-container-icons {
+		width: 90%;
+		padding: 0.3rem;
+	}
+
+	.sb-fixed {
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+
+	.sb-company-icon {
+		height: 1.7rem;
+		border-radius: 0.3rem;
+	}
+
+	.sb-plus-icon {
+		font-size: 1.7rem;
+	}
 }
 
